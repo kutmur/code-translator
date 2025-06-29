@@ -72,7 +72,7 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	// Add all disposables to the context
-	context.subscriptions.push(disposable, onDidChangeTextDocument);
+	context.subscriptions.push(onDidChangeTextDocument);
 }
 
 // This method is called when your extension is deactivated
