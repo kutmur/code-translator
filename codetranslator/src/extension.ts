@@ -41,13 +41,13 @@ export function activate(context: vscode.ExtensionContext) {
 			outputChannel.appendLine(`File: ${activeEditor.document.fileName}`);
 			
 			// Log to console for debugging
-			console.log(`CodeTranslator: Target language set to '${targetLang}'`);
-			console.log(`CodeTranslator: Active file is '${activeEditor.document.fileName}'`);
+			// Removed redundant console.log call for target language
+			// Removed redundant console.log call for active file
 		} else {
 			// No active editor, clear target language
 			targetLang = null;
 			outputChannel.appendLine('No active editor - target language cleared');
-			console.log('CodeTranslator: No active editor, target language cleared');
+			// Removed redundant console.log call for no active editor
 		}
 	}
 
