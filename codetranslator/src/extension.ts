@@ -98,7 +98,6 @@ export function activate(context: vscode.ExtensionContext) {
 				updateTargetLanguage();
 				
 				// Retrieve the updated target language
-				// Retrieve the updated target language
 				
 				// Log detection results to output panel
 				outputChannel.appendLine(`--- Paste Detection ---`);
