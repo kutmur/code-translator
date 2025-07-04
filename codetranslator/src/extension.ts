@@ -94,13 +94,11 @@ export function activate(context: vscode.ExtensionContext) {
 			
 			if (detectedLanguage) {
 				// Get the current file's language (target language) with safety check
-				const activeEditor = vscode.window.activeTextEditor;
-				const currentLanguage = activeEditor ? activeEditor.document.languageId : null;
+				// Update target language using centralized logic
+				updateTargetLanguage();
 				
-				// Update target language if we have an active editor
-				if (currentLanguage) {
-					targetLang = currentLanguage;
-				}
+				// Retrieve the updated target language
+				const currentLanguage = targetLang;
 				
 				// Log detection results to output panel
 				outputChannel.appendLine(`--- Paste Detection ---`);
